@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Letting Go Ritual</title>
   <style>
     body {
@@ -52,6 +52,7 @@
   <p>Select the emotion you'd like to release:</p>
 
   <select id="emotionSelector">
+    <option value="">-- Choose an emotion --</option>
     <option>Fear</option>
     <option>Shame</option>
     <option>Guilt</option>
@@ -96,11 +97,44 @@
     <option>Resignation</option>
   </select>
 
-  <textarea placeholder="Write what you’d like to let go of today…"></textarea>
+  <textarea id="releaseText" placeholder="Write what you’d like to let go of today…"></textarea>
 
-  <button onclick="releaseEmotion(document.getElementById('emotionSelector').value)">Release It</button>
+  <button id="releaseButton">Release It</button>
 
   <div id="message"></div>
+
+  <script>
+    document.getElementById("releaseButton").addEventListener("click", function () {
+      const emotion = document.getElementById("emotionSelector").value;
+      const journal = document.getElementById("releaseText").value;
+
+      if (!emotion) {
+        alert("Please select an emotion to release.");
+        return;
+      }
+
+      let content = `
+        <h2>🖤 Emotion: ${emotion}</h2>
+        <h3>🌬️ Release Reflection</h3>
+        <p>You chose to release: <strong>${emotion}</strong>.</p>
+        ${journal ? `<p>You wrote: “<em>${journal}</em>”</p>` : ''}
+        <h3>🌿 Letting Go Ritual</h3>
+        <ul>
+          <li>Find stillness and take 3 deep breaths.</li>
+          <li>Say: “I release ${emotion.toLowerCase()} now. It no longer belongs to me.”</li>
+          <li>Place your hand on your heart and feel the release.</li>
+        </ul>
+        <h3>💫 Affirmation</h3>
+        <p><em>I am free from ${emotion.toLowerCase()}. I choose peace, power, and self-love.</em></p>
+      `;
+
+      document.getElementById("message").innerHTML = content;
+    });
+  </script>
+
+</body>
+</html>
+
 <script>
 function releaseEmotion(emotion) {
   let content = '';
