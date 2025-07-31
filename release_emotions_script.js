@@ -114,7 +114,6 @@
       }
  releaseEmotion(emotion);
 });
-      let content = `
         <h2>🖤 Emotion: ${emotion}</h2>
         <h3>🌬️ Release Reflection</h3>
         <p>You chose to release: <strong>${emotion}</strong>.</p>
