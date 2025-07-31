@@ -877,31 +877,6 @@ function releaseEmotion(emotion) {
   }
 
 
-  if (emotion === "Shattered trust") {
-    content = `
-      <h2>🖤 Emotion: Shattered trust</h2>
-      <h3>🔍 What Is Shattered trust?</h3>
-      <p>This is a placeholder description of shattered trust — what it is, why we feel it, and where it shows up in our lives.</p>
-
-      <h3>🧠 What It Does in the Body</h3>
-      <p>Shattered trust can create physical and emotional patterns that keep us stuck in the past. Acknowledging it is the first step toward healing.</p>
-
-      <h3>🌬️ Why We Need to Release It</h3>
-      <p>You are safe now. You don’t need to carry shattered trust any longer. Let it leave your body with your breath.</p>
-
-      <h3>🌿 Letting Go Ritual</h3>
-      <ul>
-        <li>Find stillness and take 3 deep breaths.</li>
-        <li>Say: “I release shattered trust now. It no longer belongs to me.”</li>
-        <li>Place your hand on your heart and feel the release.</li>
-      </ul>
-
-      <h3>💫 Affirmation for Shattered trust</h3>
-      <p><em>I am free from shattered trust. I choose peace, power, and self-love.</em></p>
-    `;
-  }
-
-
   if (emotion === "Confusion") {
     content = `
       <h2>🖤 Emotion: Confusion</h2>
