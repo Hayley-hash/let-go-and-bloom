@@ -1,3 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Letting Go Ritual</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f7f5f3;
+      color: #333;
+    }
+
+    h2, h3 {
+      color: #444;
+    }
+
+    select, textarea, button {
+      width: 100%;
+      margin-top: 15px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #2b2b2b;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #444;
+    }
+
+    #message {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🌿 Letting Go Ritual</h2>
+  <p>Select the emotion you'd like to release:</p>
+
+  <select id="emotionSelector">
+    <option>Fear</option>
+    <option>Shame</option>
+    <option>Guilt</option>
+    <option>Grief</option>
+    <option>Sadness</option>
+    <option>Anger</option>
+    <option>Resentment</option>
+    <option>Jealousy</option>
+    <option>Envy</option>
+    <option>Bitterness</option>
+    <option>Regret</option>
+    <option>Loneliness</option>
+    <option>Hopelessness</option>
+    <option>Helplessness</option>
+    <option>Anxiety</option>
+    <option>Dread</option>
+    <option>Rejection</option>
+    <option>Abandonment</option>
+    <option>Unworthiness</option>
+    <option>Self-hatred</option>
+    <option>Emptiness</option>
+    <option>Despair</option>
+    <option>Insecurity</option>
+    <option>Disappointment</option>
+    <option>Frustration</option>
+    <option>Overwhelm</option>
+    <option>Powerlessness</option>
+    <option>Embarrassment</option>
+    <option>Distrust</option>
+    <option>Loss</option>
+    <option>Heartache</option>
+    <option>Longing</option>
+    <option>Disconnection</option>
+    <option>Neglect</option>
+    <option>Suppression</option>
+    <option>Confusion</option>
+    <option>Alienation</option>
+    <option>Terror</option>
+    <option>Failure</option>
+    <option>Repression</option>
+    <option>Desperation</option>
+    <option>Resignation</option>
+  </select>
+
+  <textarea placeholder="Write what you’d like to let go of today…"></textarea>
+
+  <button onclick="releaseEmotion(document.getElementById('emotionSelector').value)">Release It</button>
+
+  <div id="message"></div>
 <script>
 function releaseEmotion(emotion) {
   let content = '';
