@@ -112,7 +112,8 @@
         alert("Please select an emotion to release.");
         return;
       }
-
+ releaseEmotion(emotion);
+});
       let content = `
         <h2>🖤 Emotion: ${emotion}</h2>
         <h3>🌬️ Release Reflection</h3>
