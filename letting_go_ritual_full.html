@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Letting Go Ritual</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+    select, textarea, button {
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    #message {
+      margin-top: 30px;
+      background: #f0f0f0;
+      padding: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Letting Go Ritual</h2>
+  <p>What are you carrying today?</p>
+
+  <select id="emotionSelector">
+    <option>Abandonment</option>
+    <option>Alienation</option>
+    <option>Anger</option>
+    <option>Anxiety</option>
+    <option>Bitterness</option>
+    <option>Confusion</option>
+    <option>Despair</option>
+    <option>Desperation</option>
+    <option>Disappointment</option>
+    <option>Disconnection</option>
+    <option>Distrust</option>
+    <option>Dread</option>
+    <option>Embarrassment</option>
+    <option>Emptiness</option>
+    <option>Envy</option>
+    <option>Failure</option>
+    <option>Fear</option>
+    <option>Frustration</option>
+    <option>Grief</option>
+    <option>Guilt</option>
+    <option>Heartache</option>
+    <option>Helplessness</option>
+    <option>Hopelessness</option>
+    <option>Insecurity</option>
+    <option>Jealousy</option>
+    <option>Loneliness</option>
+    <option>Longing</option>
+    <option>Loss</option>
+    <option>Neglect</option>
+    <option>Overwhelm</option>
+    <option>Powerlessness</option>
+    <option>Regret</option>
+    <option>Rejection</option>
+    <option>Repression</option>
+    <option>Resentment</option>
+    <option>Resignation</option>
+    <option>Sadness</option>
+    <option>Self-hatred</option>
+    <option>Shame</option>
+    <option>Suppression</option>
+    <option>Terror</option>
+    <option>Unworthiness</option>
+  </select>
+
+  <textarea id="releaseText" placeholder="Write what you’d like to let go of today…"></textarea>
+  <button id="releaseButton">Release It</button>
+
+  <div id="message"></div>
+
+  <script>
+    document.getElementById("releaseButton").addEventListener("click", function () {
+      const emotion = document.getElementById("emotionSelector").value;
+      const journal = document.getElementById("releaseText").value;
+
+      if (!emotion) {
+        alert("Please select an emotion to release.");
+        return;
+      }
+      releaseEmotion(emotion);
+    });
+
+    function releaseEmotion(emotion) {
+      const message = document.getElementById("message");
+      message.innerHTML = `
+        <h2>🖤 Emotion: ${emotion}</h2>
+        <h3>🔍 What Is ${emotion}?</h3>
+        <p>This is a placeholder description of ${emotion.toLowerCase()} — what it is, why we feel it, and where it shows up in our lives.</p>
+
+        <h3>🧠 What It Does in the Body</h3>
+        <p>${emotion} can create physical and emotional patterns that keep us stuck in the past. Acknowledging it is the first step toward healing.</p>
+
+        <h3>🌬️ Why We Need to Release It</h3>
+        <p>You are safe now. You don’t need to carry ${emotion.toLowerCase()} any longer. Let it leave your body with your breath.</p>
+
+        <h3>🌿 Letting Go Ritual</h3>
+        <ul>
+          <li>Find stillness and take 3 deep breaths.</li>
+          <li>Say: “I release ${emotion.toLowerCase()} now. It no longer belongs to me.”</li>
+          <li>Place your hand on your heart and feel the release.</li>
+        </ul>
+
+        <h3>💫 Affirmation for ${emotion}</h3>
+        <p><em>I am free from ${emotion.toLowerCase()}. I choose peace, power, and self-love.</em></p>
+      `;
+    }
+  </script>
+</body>
+</html>
